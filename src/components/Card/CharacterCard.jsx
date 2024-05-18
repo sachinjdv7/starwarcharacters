@@ -23,7 +23,7 @@ function CharacterCard({ results }) {
           overflow="hidden"
           transition="all 0.3s ease"
           _hover={{ boxShadow: "2xl", transform: "translateY(-4px)" }}
-          maxW="300px"
+          maxW="90%"
         >
           <CardHeader p={6}>
             <Heading size="md" color="teal.300" className="text-center">

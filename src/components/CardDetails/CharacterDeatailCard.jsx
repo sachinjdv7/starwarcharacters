@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { config } from "../../config/config";
-import { Loader } from "..";
+import { Header, Loader } from "..";
 import axios from "axios";
 import {
   Box,
@@ -42,38 +42,41 @@ function CharacterDetailCard() {
   // }
 
   return (
-    <Center minH="100vh">
-      {loading ? (
-        // <Text>Loading...</Text>
-        <Loader />
-      ) : (
-        <Card
-          bg="gray.800"
-          color="white"
-          borderRadius="2xl"
-          boxShadow="xl"
-          overflow="hidden"
-          transition="all 0.3s ease"
-          _hover={{ boxShadow: "2xl", transform: "translateY(-4px)" }}
-          maxW="300px"
-        >
-          <CardHeader p={6}>
-            <Heading size="md" color="teal.300" className="text-center">
-              {name}
-            </Heading>
-          </CardHeader>
-          <CardBody p={6}>
-            <Text fontSize="lg" color="gray.300" className="text-center">
-              Height : {height} <br />
-              Birth Year : {birth_year} <br />
-              Hair Color : {hair_color} <br />
-              Skin Color : {skin_color} <br />
-              Eye Color : {eye_color}
-            </Text>
-          </CardBody>
-        </Card>
-      )}
-    </Center>
+    <>
+      <Header />
+      <Center minH="50vh">
+        {loading ? (
+          // <Text>Loading...</Text>
+          <Loader />
+        ) : (
+          <Card
+            bg="gray.800"
+            color="white"
+            borderRadius="2xl"
+            boxShadow="xl"
+            overflow="hidden"
+            transition="all 0.3s ease"
+            _hover={{ boxShadow: "2xl", transform: "translateY(-4px)" }}
+            maxW="300px"
+          >
+            <CardHeader p={6}>
+              <Heading size="md" color="teal.300" className="text-center">
+                {name}
+              </Heading>
+            </CardHeader>
+            <CardBody p={6}>
+              <Text fontSize="lg" color="gray.300" className="text-center">
+                Height : {height} <br />
+                Birth Year : {birth_year} <br />
+                Hair Color : {hair_color} <br />
+                Skin Color : {skin_color} <br />
+                Eye Color : {eye_color}
+              </Text>
+            </CardBody>
+          </Card>
+        )}
+      </Center>
+    </>
   );
 }
 

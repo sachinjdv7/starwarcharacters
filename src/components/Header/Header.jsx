@@ -5,7 +5,7 @@ function Header() {
   return (
     <Box
       textAlign="center"
-      py={10}
+      py={2}
       px={5}
       bgGradient="linear(to-r, teal.500, green.500)"
       borderRadius="lg"
