@@ -1,0 +1,22 @@
+@keyframes loaderSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.loader-logo {
+  animation: loaderSpin infinite 2.5s linear;
+  height: 8rem;
+  fill: #ffe81f; /* COLOR_YELLOW */
+}
