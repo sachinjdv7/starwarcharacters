@@ -32,7 +32,6 @@ function Home() {
       <Header />
       {loading ? (
         <Center minH="50vh">
-          {/* <Text>Loading...</Text> */}
           <Loader />
         </Center>
       ) : (
@@ -43,11 +42,7 @@ function Home() {
         </Box>
       )}
 
-      <Pagination
-        count={count}
-        pageNumber={pageNumber}
-        setPageNumber={setPageNumber}
-      />
+      <Pagination count={count} setPageNumber={setPageNumber} />
     </>
   );
 }

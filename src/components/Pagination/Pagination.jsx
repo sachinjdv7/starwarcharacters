@@ -1,8 +1,7 @@
 import React from "react";
-import { Button } from "@chakra-ui/react";
 import ReactPaginate from "react-paginate";
 
-function Pagination({ count, pageNumber, setPageNumber }) {
+function Pagination({ count, setPageNumber }) {
   return (
     <div>
       <ReactPaginate

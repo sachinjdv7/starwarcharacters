@@ -4,7 +4,6 @@ import { config } from "../../config/config";
 import { Header, Loader } from "..";
 import axios from "axios";
 import {
-  Box,
   Card,
   CardBody,
   CardHeader,
@@ -32,14 +31,6 @@ function CharacterDetailCard() {
         .finally(() => setLoading(false));
     })();
   }, [id]);
-
-  // if (!peopleDetail) {
-  //   return (
-  //     <Center minH="100vh">
-  //       <Text>Loading...</Text>
-  //     </Center>
-  //   );
-  // }
 
   return (
     <>
